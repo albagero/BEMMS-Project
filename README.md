@@ -94,8 +94,8 @@ It bridges the gap between frontline clinical healthcare workers and biomedical 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/omersx/BEMMS-app.git
-cd BEMMS-app
+git clone https://github.com/albagero/BEMMS-Project.git
+cd BEMMS-Project
 ```
 
 ### 2. Configure Environment Variables

@@ -792,8 +792,8 @@ erDiagram
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/omersx/BEMMS-app.git
-cd BEMMS-app
+git clone https://github.com/albagero/BEMMS-Project.git
+cd BEMMS-Project
 ```
 
 ### Step 2: Environment Configuration
