@@ -7,7 +7,7 @@
 [![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-0.36-C5F74F?style=flat&logo=drizzle)](https://orm.drizzle.team/)
 [![Vitest](https://img.shields.io/badge/Vitest-5.0-6E9F18?style=flat&logo=vitest)](https://vitest.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Compliance](https://img.shields.io/badge/Compliance-21_CFR_Part_11-emerald)]()
+
 
 **BEMMS** is a production-grade, full-stack Biomedical Engineering and Computerized Maintenance Management System (CMMS) designed for hospitals, clinical healthcare networks, and medical device service teams.
 
@@ -188,11 +188,7 @@ BEMMS-app/
 
 ---
 
-## 📜 Compliance & Regulatory Standards
 
-- **FDA 21 CFR Part 11**: Cryptographic password re-authentication, immutable audit logging, electronic signature manifest, and SHA-256 chain of custody.
-- **IEC 62353**: In-service and post-repair medical electrical equipment safety testing workflows.
-- **Role Separation of Duties**: Prevents engineers from approving their own work orders when managerial sign-off policy is active.
 
 ---
 
