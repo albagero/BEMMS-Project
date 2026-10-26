@@ -31,17 +31,18 @@ export function EditEngineerDialog({
   onOpenChange,
   onSuccess,
 }: EditEngineerDialogProps) {
-  if (!engineer) return null;
-
-  const [jobTitle, setJobTitle] = useState(engineer.jobTitle);
-  const [specialization, setSpecialization] = useState(engineer.specialization || '');
-  const [extension, setExtension] = useState(engineer.extension || '');
-  const [mobileNumber, setMobileNumber] = useState(engineer.mobileNumber || '');
-  const [shiftHours, setShiftHours] = useState(engineer.shiftHours || '08:00 AM - 04:00 PM');
-  const [workingDays, setWorkingDays] = useState<string[]>(engineer.workingDays || []);
-  const [onCallDays, setOnCallDays] = useState<string[]>(engineer.onCallDays || []);
-  const [notes, setNotes] = useState(engineer.notes || '');
+  const [jobTitle, setJobTitle] = useState(engineer?.jobTitle ?? '');
+  const [specialization, setSpecialization] = useState(engineer?.specialization || '');
+  const [extension, setExtension] = useState(engineer?.extension || '');
+  const [mobileNumber, setMobileNumber] = useState(engineer?.mobileNumber || '');
+  const [shiftHours, setShiftHours] = useState(engineer?.shiftHours || '08:00 AM - 04:00 PM');
+  const [workingDays, setWorkingDays] = useState<string[]>(engineer?.workingDays || []);
+  const [onCallDays, setOnCallDays] = useState<string[]>(engineer?.onCallDays || []);
+  const [notes, setNotes] = useState(engineer?.notes || '');
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Hooks must run in the same order on every render, so bail out after them.
+  if (!engineer) return null;
 
   const toggleWorkingDay = (day: string) => {
     setWorkingDays((prev) =>

@@ -54,10 +54,13 @@ export function EngineerDetailsDialog({
   onEdit,
   onStatusUpdated,
 }: EngineerDetailsDialogProps) {
-  if (!engineer) return null;
-
-  const [currentStatus, setCurrentStatus] = useState<EngineerDutyStatus>(engineer.dutyStatus);
+  const [currentStatus, setCurrentStatus] = useState<EngineerDutyStatus>(
+    engineer?.dutyStatus ?? 'on_duty'
+  );
   const [isUpdatingStatus, setIsUpdatingStatus] = useState(false);
+
+  // Hooks must run in the same order on every render, so bail out after them.
+  if (!engineer) return null;
 
   // Sync state if engineer changes
   if (engineer.dutyStatus !== currentStatus && !isUpdatingStatus) {
